@@ -8,9 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var isActive = false
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        
+        NavigationView {
+        
+            NavigationLink(isActive: $isActive) {
+                FirstView()
+            } label: {
+                Text("First View")
+            }
+
+            
+            
+        }
+        
+        
     }
 }
 
